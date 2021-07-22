@@ -16,6 +16,6 @@ goto :EOF
 
 $Shell = New-Object -ComObject ("WScript.Shell")
 $Shortcut = $Shell.CreateShortcut("ps.lnk")
-$Shortcut.Target = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+$Shortcut.TargetPath = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
 $Shortcut.IconLocation = "$pwd\[!] Covers\cover.ico, 0"
 $Shortcut.Save()
