@@ -3,10 +3,11 @@ setlocal
 set currentPath=%cd%
 for /f "delims=" %%i in ('iconChooser.bat') do (
 	set "iconPath=%%i"
+	echo %%i
 )
-echo "%currentPath%"
-echo "%iconPath%"
+attrib -s -h "[!] Covers"
 md "[!] Covers"
+echo h
 copy "%iconPath%" "%currentPath%\[!] Covers"
 attrib -s -h desktop.ini
 echo [.ShellClassInfo] >desktop.ini
@@ -18,4 +19,6 @@ echo FolderType=Videos >>desktop.ini
 attrib +s +h "[!] Covers"
 attrib +s +h desktop.ini
 ie4uinit -show
-rem dir
+
+:GUI
+call gui
