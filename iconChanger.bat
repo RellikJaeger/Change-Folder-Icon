@@ -7,7 +7,6 @@ for /f "delims=" %%i in ('iconChooser.bat') do (
 )
 attrib -s -h "[!] Covers"
 md "[!] Covers"
-echo h
 copy "%iconPath%" "%currentPath%\[!] Covers"
 attrib -s -h desktop.ini
 echo [.ShellClassInfo] >desktop.ini
