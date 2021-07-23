@@ -11,5 +11,6 @@ echo FolderType=Videos >>desktop.ini
 attrib +s +h "[!] Covers"
 attrib +s +h desktop.ini
 ie4uinit -show
+call iconChanger
 call powerlink
 call gui
