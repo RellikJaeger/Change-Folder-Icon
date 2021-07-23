@@ -9,14 +9,15 @@ attrib -s -h "[!] Covers"
 md "[!] Covers"
 copy "%iconPath%" "%currentPath%\[!] Covers"
 attrib -s -h desktop.ini
-echo [.ShellClassInfo] >desktop.ini
-echo IconResource=[!] Covers\cover.ico,0 >>desktop.ini
-echo [ViewState] >>desktop.ini
-echo Mode= >>desktop.ini
-echo Vid= >>desktop.ini
-echo FolderType=Videos >>desktop.ini
-attrib +s +h "[!] Covers"
+(
+	echo [.ShellClassInfo]
+	echo ConfirmFileOp=0
+	echo NoSharing=0
+	echo IconFile=[!] Covers\cover.ico
+	echo IconIndex=0
+)>desktop.ini
 attrib +s +h desktop.ini
+attrib +a +r .
 ie4uinit -show
 
 :GUI
